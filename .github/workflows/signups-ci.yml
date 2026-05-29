@@ -1,0 +1,36 @@
+name: Sign-up site CI
+
+# Runs whenever the sign-up site changes, on pull requests and on pushes to the
+# working branches. It verifies the app installs and builds cleanly so a broken
+# change can't be merged unnoticed. Scoped to signups/ so word-of-the-day-only
+# changes don't trigger it.
+on:
+  pull_request:
+    paths:
+      - "signups/**"
+      - ".github/workflows/signups-ci.yml"
+  push:
+    paths:
+      - "signups/**"
+      - ".github/workflows/signups-ci.yml"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: signups
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+          cache-dependency-path: signups/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
