@@ -28,7 +28,7 @@
     "country": ""
   },
 
-  "photo_url": "",
+  "photo_url": "https://feldmana332.github.io/Dashboard/me.jpg",
   "_photo_note": "Optional. A direct https URL to a square JPG/PNG (e.g. <base_url>/me.jpg after you drop me.jpg into ../docs/). Included in the hosted card only; never embedded in the QR itself.",
 
   "note": ""

@@ -33,8 +33,8 @@ python3 generate.py --offline
 ```
 
 ### 2. Turn on GitHub Pages
-In the repo: **Settings → Pages → Build from a branch →** branch `main`,
-folder `/docs` → Save. After a minute your card is live at
+In the repo: **Settings → Pages → Build from a branch →** pick your repo's
+default/published branch, folder `/docs` → Save. After a minute your card is live at
 `https://feldmana332.github.io/Dashboard/` and the `.vcf` at
 `.../contact.vcf`. (If your Pages URL differs, set `base_url` in
 `contact.json` and rerun.)

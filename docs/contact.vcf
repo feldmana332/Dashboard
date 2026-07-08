@@ -4,4 +4,5 @@ N:Last;First;;;
 FN:First Last
 TEL;TYPE=CELL:+1 555 123 4567
 EMAIL;TYPE=HOME,INTERNET:af1@me.com
+PHOTO;VALUE=URI:https://feldmana332.github.io/Dashboard/me.jpg
 END:VCARD
