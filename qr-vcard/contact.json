@@ -1,0 +1,36 @@
+{
+  "_README": "Edit the fields below, then run `python3 generate.py` from this folder. Everything in ../docs/ (the .vcf, both QR PNGs, and the web page) plus the Scriptable widget config is regenerated. Fields left blank are omitted from the vCard.",
+
+  "base_url": "https://feldmana332.github.io/Dashboard",
+  "_base_url_note": "The GitHub Pages URL where ../docs/ is published. The QR points at <base_url>/contact.vcf. Change this if you enable Pages on a different repo/branch or add a custom domain.",
+
+  "prefix": "Mr.",
+  "first_name": "Alan",
+  "last_name": "Feldman",
+  "org": "Wharton — Zell/Lurie Real Estate Center",
+  "title": "",
+
+  "phones": [
+    { "type": "cell", "number": "+1 856-873-6545" }
+  ],
+  "_phones_note": "type is one of: cell, work, home. Add/remove entries freely.",
+
+  "emails": [
+    { "type": "home", "address": "af1@me.com" }
+  ],
+  "_emails_note": "type is one of: home, work.",
+
+  "url": "https://real-estate.wharton.upenn.edu/profile/alanfeld/",
+  "address": {
+    "street": "",
+    "city": "",
+    "region": "",
+    "postal_code": "",
+    "country": ""
+  },
+
+  "photo_url": "https://feldmana332.github.io/Dashboard/me.jpg",
+  "_photo_note": "Optional. A direct https URL to a square JPG/PNG (e.g. <base_url>/me.jpg after you drop me.jpg into ../docs/). Included in the hosted card only; never embedded in the QR itself.",
+
+  "note": ""
+}
