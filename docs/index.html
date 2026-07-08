@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>First Last</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { font-family: -apple-system, system-ui, sans-serif; margin: 0;
+         min-height: 100vh; display: grid; place-items: center;
+         background: #f5f5f7; color: #1d1d1f; }
+  @media (prefers-color-scheme: dark) { body { background:#000; color:#f5f5f7; } }
+  .card { text-align: center; padding: 2rem; }
+  h1 { margin: 0 0 .25rem; font-size: 1.6rem; }
+  .sub { margin: 0 0 1.5rem; opacity: .6; }
+  img { width: min(70vw, 320px); height: auto; background:#fff;
+        padding: 16px; border-radius: 20px; box-shadow: 0 8px 30px rgba(0,0,0,.12); }
+  a.btn { display:inline-block; margin-top:1.5rem; padding:.8rem 1.6rem;
+          background:#0071e3; color:#fff; text-decoration:none;
+          border-radius:980px; font-weight:600; }
+  .hint { margin-top:1rem; font-size:.85rem; opacity:.55; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <h1>First Last</h1>
+    
+    <img src="qr-url.png" alt="Scan to add First Last to contacts">
+    <div><a class="btn" href="contact.vcf">Add to Contacts</a></div>
+    <p class="hint">Point your camera at the code, or tap the button.</p>
+  </div>
+</body>
+</html>
