@@ -1,0 +1,42 @@
+name: Regenerate contact card
+
+# When contact.json is edited (e.g. from github.com in a browser), rebuild the
+# vCard, QR codes, and web page and commit them back, so the live Pages site
+# updates without anyone running generate.py by hand.
+
+on:
+  push:
+    branches: [claude/iphone-qr-vcard-shortcut-fsuccg]
+    paths: ['qr-vcard/contact.json']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  regen:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - run: pip install segno
+
+      - name: Regenerate card + QR codes
+        working-directory: qr-vcard
+        run: python generate.py
+
+      - name: Commit regenerated files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/
+          if git diff --cached --quiet; then
+            echo "Nothing changed."
+          else
+            git commit -m "Auto-regenerate contact card from contact.json"
+            git push
+          fi
