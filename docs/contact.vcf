@@ -1,8 +1,10 @@
 BEGIN:VCARD
 VERSION:3.0
-N:Last;First;;;
-FN:First Last
-TEL;TYPE=CELL:+1 555 123 4567
+N:Feldman;Alan;;Mr.;
+FN:Alan Feldman
+ORG:Wharton — Zell/Lurie Real Estate Center
+TEL;TYPE=CELL:+1 856-873-6545
 EMAIL;TYPE=HOME,INTERNET:af1@me.com
+URL:https://real-estate.wharton.upenn.edu/profile/alanfeld/
 PHOTO;VALUE=URI:https://feldmana332.github.io/Dashboard/me.jpg
 END:VCARD

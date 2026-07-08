@@ -4,13 +4,14 @@
   "base_url": "https://feldmana332.github.io/Dashboard",
   "_base_url_note": "The GitHub Pages URL where ../docs/ is published. The QR points at <base_url>/contact.vcf. Change this if you enable Pages on a different repo/branch or add a custom domain.",
 
-  "first_name": "First",
-  "last_name": "Last",
-  "org": "",
+  "prefix": "Mr.",
+  "first_name": "Alan",
+  "last_name": "Feldman",
+  "org": "Wharton — Zell/Lurie Real Estate Center",
   "title": "",
 
   "phones": [
-    { "type": "cell", "number": "+1 555 123 4567" }
+    { "type": "cell", "number": "+1 856-873-6545" }
   ],
   "_phones_note": "type is one of: cell, work, home. Add/remove entries freely.",
 
@@ -19,7 +20,7 @@
   ],
   "_emails_note": "type is one of: home, work.",
 
-  "url": "",
+  "url": "https://real-estate.wharton.upenn.edu/profile/alanfeld/",
   "address": {
     "street": "",
     "city": "",

@@ -47,11 +47,12 @@ def build_vcard(cfg: dict, *, include_photo: bool) -> str:
     """Return a vCard 3.0 string. iOS is happiest with 3.0."""
     first = cfg.get("first_name", "").strip()
     last = cfg.get("last_name", "").strip()
+    prefix = cfg.get("prefix", "").strip()
     full = " ".join(p for p in (first, last) if p).strip()
 
     lines = ["BEGIN:VCARD", "VERSION:3.0"]
     # N = structured name: Last;First;Middle;Prefix;Suffix
-    lines.append(f"N:{esc(last)};{esc(first)};;;")
+    lines.append(f"N:{esc(last)};{esc(first)};;{esc(prefix)};")
     lines.append(f"FN:{esc(full)}")
 
     if cfg.get("org"):
